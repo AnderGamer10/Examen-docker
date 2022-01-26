@@ -1,4 +1,4 @@
-#Informacion del examen
+# Informacion del examen
 
 Puertos utilizados:
   - *web*: 4000
