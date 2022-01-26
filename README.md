@@ -7,15 +7,18 @@ Puertos utilizados:
   - *proxy*: 80
 
 1.- **Para arrancar las aplicaciones directamente (webserver.js y apiserver.js)**
+
 Con esto ejecutamos directamente las aplicaciones.
 node webserver.js
 node apiserver.js
 
 2.- **Para arrancar aplicaciones con docker run**
+
 %CD% Esto es el path del directorio actual.
 Docker run –it –v %CD%: /app –w /app node node webserver.js
 
 3.- **Para arrancar aplicaciones orquestadas**
+
 Teniendo el docker-compose hecho lo construimos y despuÈs lo levantamos.
 Docker-compose build
 Docker-compose up
