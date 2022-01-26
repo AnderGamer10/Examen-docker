@@ -5,6 +5,7 @@ Puertos utilizados:
   - *api1*: 3000
   - *api2*: 3000
   - *proxy*: 80
+
 1.- **Para arrancar las aplicaciones directamente (webserver.js y apiserver.js)**
 Con esto ejecutamos directamente las aplicaciones.
 node webserver.js
