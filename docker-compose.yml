@@ -1,16 +1,15 @@
 version: '3.1'
 services:
-  app:
+
+  web:
     image: node
     volumes:
       - .:/app
     working_dir: /app
     environment:
-      - API=http://localhost/2:80
+      - API=http://localhost/api
     entrypoint: node
     command: [ "webserver.js","4000"]
-    ports:
-      - 3000:3000
 
   api1:
     image: node
@@ -19,8 +18,6 @@ services:
     working_dir: /app
     entrypoint: node
     command: [ "apiserver.js","3000"]
-    ports:
-      - 4000:4000
 
   api2:
     image: node
@@ -28,9 +25,7 @@ services:
       - .:/app
     working_dir: /app
     entrypoint: node
-    command: [ "apiserver2.js","3000"]
-    ports:
-      - 5000:5000
+    command: [ "apiserver.js","3000"]
     
   proxy:
     image: nginx
